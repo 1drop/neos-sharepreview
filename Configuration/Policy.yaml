@@ -1,0 +1,7 @@
+roles:
+  'Onedrop.SharePreview:Viewer':
+    parentRoles: ['TYPO3.Flow:Everybody']
+    privileges:
+      -
+        privilegeTarget: 'TYPO3.Neos:Backend.OtherUsersPersonalWorkspaceAccess'
+        permission: GRANT

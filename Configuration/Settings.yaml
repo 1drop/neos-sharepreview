@@ -1,0 +1,16 @@
+TYPO3:
+  Flow:
+    security:
+      authentication:
+        providers:
+          PreviewProvider:
+            provider: 'Onedrop\SharePreview\Security\Authentication\Provider\WorkspaceTokenProvider'
+            providerOptions:
+              workspaceTokens:
+                'token': 'JHlChmbwBbkhwcMbS'
+              authenticateRoles: ['Onedrop.SharePreview:Viewer']
+            requestPatterns:
+              'TYPO3.Neos:backend':
+                pattern: 'Uri'
+                patternOptions:
+                  uriPattern: '(?:(?!/neos.*).)*'

@@ -1,0 +1,18 @@
+{
+    "name": "onedrop/sharepreview",
+    "type": "typo3-flow-plugin",
+    "description": "Adds the possibility to have preview links that can be sent to users without a backend user",
+    "require": {
+        "typo3/neos": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Onedrop\\SharePreview": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Onedrop.SharePreview"
+        }
+    }
+}
