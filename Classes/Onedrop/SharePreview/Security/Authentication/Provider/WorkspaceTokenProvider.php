@@ -45,10 +45,8 @@ class WorkspaceTokenProvider extends AbstractProvider
         }
 
         $credentials = $authenticationToken->getCredentials();
-        if (is_array($credentials) && isset($credentials['token'])) {
-            // todo: get the workspace somehow
-            $workspace = 'token';
-
+        if (is_array($credentials) && isset($credentials['token']) && isset($credentials['workspace'])) {
+            $workspace = $credentials['workspace'];
             if ($credentials['token'] === $this->options['workspaceTokens'][$workspace]) {
                 $authenticationToken->setAuthenticationStatus(TokenInterface::AUTHENTICATION_SUCCESSFUL);
                 $account = new Account();
